@@ -1,0 +1,46 @@
+.main-next-week {
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background-color: orange;
+    padding-top: 1rem;
+}
+
+.slider {
+    overflow-x: scroll;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    cursor: grabbing;
+}
+
+.card {
+    padding: 2rem;
+    color: var(--whiteTheme);
+    background-color: var(--blackTheme);
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height: 20rem;
+    min-width: 15rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    transition: transform 0.2s linear;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.active {
+    transform: scale(1.01);
+    transition: transform 0.2s linear;
+}
+
+h2 {
+    text-align: center;
+}

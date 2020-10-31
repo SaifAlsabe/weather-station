@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    /*Chrome, Safari and Opera*/
+}
+
+.container,
+.slider {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.slider {
+    user-select: none;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+}
+
+:root {
+    --blackTheme: rgb(20, 20, 20);
+    --whiteTheme: #f4f4f4;
+}
+
+a {
+    color: var(--whiteTheme);
+    text-decoration: none;
+    display: inline-block;
+    width: 80%;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    transition: background 0.2s;
+}
+
+a:hover {
+    color: var(--blackTheme);
+    background-color: var(--whiteTheme);
+    border-radius: 0.5rem;
+}
+
+.container {
+    /* prevent header overlap */
+    scroll-padding-top: 6rem;
+    position: relative;
+    background-color: var(--whiteTheme);
+    padding-top: 4.5rem;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 4.5rem;
+    background-color: var(--blackTheme);
+    border-bottom: 0.2rem solid orangered;
+    z-index: 3;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding-top: 0;
+    }
+    .header {
+        position: relative;
+    }
+}
+
+.nav {
+    height: 100%;
+}
+
+.nav-list {
+    height: 100%;
+    font-size: large;
+    font-weight: bold;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column;
+    }
+}
+
+.main {
+    height: 100%;
+}
+
+.footer {
+    height: 4rem;
+    width: 100%;
+    background-color: var(--blackTheme);
+    color: var(--whiteTheme);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
