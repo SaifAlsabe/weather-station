@@ -93,7 +93,7 @@ function HomeScreen() {
                     <br></br>
 
                     <label htmlFor="zipcode"><strong>Zipcode</strong></label>
-                    <input value={zipcode} onChange={(e) => { setZipcode(e.target.value) }} type="text" required maxLength="5" pattern="[0-9]{5}" name="zipcode" id="zipcode" autoComplete='off'></input>
+                    <input value={zipcode} onChange={(e) => { setZipcode(e.target.value) }} type="text" required maxLength="5" name="zipcode" id="zipcode" autoComplete='off'></input>
 
                     <br></br>
 

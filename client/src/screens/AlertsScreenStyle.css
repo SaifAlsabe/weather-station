@@ -33,3 +33,30 @@
 p {
     text-align: justify;
 }
+
+.back {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.back-to-top {
+    color: var(--blackTheme);
+    width: 10rem;
+    height: 3.5rem;
+    border: 0.2rem solid var(--blackTheme);
+    border-radius: 0.5rem;
+    background-color: orange;
+}
+
+.back-to-top:hover {
+    color: var(--blackTheme);
+    width: 10rem;
+    height: 3.5rem;
+    border: 0.2rem solid var(--blackTheme);
+    border-radius: 0.5rem;
+    background-color: orangered;
+}

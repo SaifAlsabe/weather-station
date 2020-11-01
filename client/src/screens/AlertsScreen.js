@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { HashLink as Link } from 'react-router-hash-link';
 import './AlertsScreenStyle.css';
 
 const AlertsScreen = () => {
@@ -48,6 +49,8 @@ const AlertsScreen = () => {
                                 <h1 className="no-alert-title">No Warnings</h1>
                             </div>
             }
+
+            <div className="back"><Link to="#home" className="back-to-top"><strong>Back to top</strong></Link></div>
 
         </div>
     )

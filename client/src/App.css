@@ -102,6 +102,10 @@ a:hover {
     .nav-list {
         flex-direction: column;
     }
+    a:hover {
+        width: 100vw;
+        border-radius: 0rem;
+    }
 }
 
 .main {
@@ -116,6 +120,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 0.2rem solid orangered;
 }
 
 ul {
