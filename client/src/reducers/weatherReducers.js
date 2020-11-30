@@ -9,7 +9,8 @@ const weatherReducer = (state = {}, action) => {
         case GET_WEATHER_ZIPCODE_SUCCESS:
             return { loading: false, data: action.payload }
         case GET_WEATHER_ZIPCODE_FAIL:
-            return { loading: false, error: action.payload }
+            console.log(action.payload)
+            return { loading: false, data: action.payload.data, error: action.payload.error }
         default:
             return state
     }

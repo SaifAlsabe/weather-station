@@ -50,7 +50,6 @@ const NextWeekScreen = () => {
 
     return (
         loading ? <div></div> :
-            error ? <div>{error}</div> :
                 <div className="main-next-week" id="week">
 
                     <h2>Next Week Forecast</h2>

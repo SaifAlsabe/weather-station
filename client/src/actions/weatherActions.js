@@ -3,7 +3,11 @@ import { GET_WEATHER_ZIPCODE_FAIL, GET_WEATHER_ZIPCODE_REQUEST, GET_WEATHER_ZIPC
 
 
 //get latitude, longitude and city
-const getWeather = (zipcode, country) => (dispatch) => {
+const getWeather = (zipcode, country) => (dispatch, getState) => {
+
+    const { weather: { data } } = getState()
+    console.log(data)
+
     dispatch({ type: GET_WEATHER_ZIPCODE_REQUEST });
     Axios.request({
             method: 'POST',
@@ -14,10 +18,9 @@ const getWeather = (zipcode, country) => (dispatch) => {
             },
         })
         .then(res1 => {
-            console.log(res1)
             dispatch(_getWeather(res1.data.coord.lat, res1.data.coord.lon));
         }).catch(error => {
-            dispatch({ type: GET_WEATHER_ZIPCODE_FAIL, payload: error.message });
+            dispatch({ type: GET_WEATHER_ZIPCODE_FAIL, payload: { data: data, error: error.message } });
         })
 }
 

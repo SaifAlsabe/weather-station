@@ -108,7 +108,6 @@ const NextDaysScreen = () => {
 
     return (
         loading ? <></> :
-            error ? <div>{error}</div> :
                 <div className="main-next-days" id="days">
 
                     <div className="main-next-days-container">

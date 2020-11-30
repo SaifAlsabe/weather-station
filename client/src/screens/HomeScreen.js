@@ -95,6 +95,7 @@ function HomeScreen() {
                     <label htmlFor="zipcode"><strong>Zipcode</strong></label>
                     <input value={zipcode} onChange={(e) => { setZipcode(e.target.value) }} type="text" required maxLength="5" name="zipcode" id="zipcode" autoComplete='off'></input>
 
+                    <div className="error">{error ? (<h4>Invalid country code or zipcode</h4>) : (<></>)}</div>
                     <br></br>
 
                     <button type="submit" className="submit-button">Submit</button>
@@ -104,13 +105,8 @@ function HomeScreen() {
 
             <div className="main-weather">
                 {
-                    loading ? (
-                        <div className="spinner"></div>)
-                        //if not loading
-                        :
-                        error ? <div>{error}</div>
-                            // if no error
-                            :
+                    loading ? <div className="spinner"></div>:
+             
                             <>
 
                                 <div className="user-weather-main info">
@@ -150,8 +146,7 @@ function HomeScreen() {
                                     <div><strong>wind direction: </strong> {data.current.wind_deg}&deg; </div>
                                     <div><strong>Pressure: </strong> {data.current.pressure} hPa</div>
                                 </div>
-
-                            </>
+                            </>    
                 }
             </div>
         </div>
