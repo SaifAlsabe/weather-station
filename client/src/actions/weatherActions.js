@@ -6,7 +6,6 @@ import { GET_WEATHER_ZIPCODE_FAIL, GET_WEATHER_ZIPCODE_REQUEST, GET_WEATHER_ZIPC
 const getWeather = (zipcode, country) => (dispatch, getState) => {
 
     const { weather: { data } } = getState()
-    console.log(data)
 
     dispatch({ type: GET_WEATHER_ZIPCODE_REQUEST });
     Axios.request({
