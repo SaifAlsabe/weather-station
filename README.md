@@ -11,6 +11,9 @@ This website uses [openweathermap](https://openweathermap.org/) API to display c
 
 Click [here](https://weather-station-api-app.herokuapp.com/) for live demo.
 
+![](demo/demo.gif)
+
+
 ## Installation
 
 Clone the source locally:

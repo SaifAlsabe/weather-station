@@ -116,14 +116,23 @@ a:hover {
 }
 
 .footer {
-    height: 4rem;
-    width: 100%;
-    background-color: var(--blackTheme);
     color: var(--whiteTheme);
+    background-color: var(--blackTheme);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-height: 20rem;
     border-top: 0.2rem solid orangered;
+}
+
+footer div {
+    width: 25rem;
+    margin: 2rem;
+}
+
+li {
+    margin-top: 0.5rem;
 }
 
 ul {
